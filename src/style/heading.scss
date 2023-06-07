@@ -1,0 +1,42 @@
+$appGBlack: #091010;
+
+.heading {
+    display: flex;
+    width: 100vw;
+    height: 6vh;
+    justify-content: space-between;
+    background-color: $appGBlack;
+    color: white;
+
+    .heading-left {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+    }
+    
+    .heading-right {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+
+        .searchProfile {
+        }
+
+        .headingProfile {
+            display: flex;
+
+            .headingProfile-left {
+
+                .headingProfile-name {
+                }
+
+                .headingProfile-sem {
+                }
+            }
+
+            .headingProfile-picture {
+            }
+        }
+    }
+}
+
