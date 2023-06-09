@@ -1,3 +1,26 @@
+@import './prop.scss';
+
 .contentPage {
     display: flex;
+    width: 100vw;
+    height: 92vh;
+
+    .dashboardPage {
+        width: 94vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .dashboardTopContents {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .dashboardBotContents {
+            display:  flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
 }

@@ -1,3 +1,5 @@
+@import './prop.scss';
+
 .navBar {
     height: 92vh;
     width: 6vw;
@@ -5,16 +7,17 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    border-right: solid 1px $appLightGray;
 
     .topBar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: column;
-        margin-top: 25px;
-        height: 20vh;
+        margin-top: 50px;
+        height: 18vh;
     }
 
     .botBar {
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 }
