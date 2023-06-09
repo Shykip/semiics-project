@@ -1,0 +1,20 @@
+.navBar {
+    height: 92vh;
+    width: 6vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .topBar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-top: 25px;
+        height: 20vh;
+    }
+
+    .botBar {
+        margin-bottom: 25px;
+    }
+}

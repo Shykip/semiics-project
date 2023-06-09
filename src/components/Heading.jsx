@@ -1,4 +1,6 @@
 import "../style/heading.scss"
+import searchIcon from "../images/search-icon.png"
+import smallProfile from "../images/small-profile.png"
 
 function Heading() {
 
@@ -6,22 +8,24 @@ function Heading() {
         <div className="heading">
 
             <div className="heading-left">
-                <div className="txtLogo"><h2>Semiics</h2></div>
-                <div className="pageTitle"><h2>Dashboard</h2></div>
+                <div className="txtLogo">Semiics</div>
+                <div className="pageTitle">Dashboard</div>
             </div>
             
             <div className="heading-right">
                 <div className="searchProfile">
-                    <img className="serachLogo" src="" alt="" />
+                    <div className="search-icon-box">
+                        <img className="serachLogo" src={searchIcon} alt="" />
+                    </div>
                     <input className="searchInput" type="text" placeholder="Search Profile" />
                 </div>
                 <div className="headingProfile">
                     <div className="headingProfile-left">
-                        <h4 className="headingProfile-name">John Kuy</h4>
-                        <h4 className="headingProfile-sem">4th sem</h4>
+                        <div className="headingProfile-name">John Kuy</div>
+                        <div className="headingProfile-sem">4th sem</div>
                     </div>
-                    <div className="headingProfile-picture">
-                        <img src="" alt="" />
+                    <div className="headingProfile-picture-box">
+                        <img src={smallProfile} alt="" />
                     </div>
                 </div>
             </div>
