@@ -1,0 +1,68 @@
+@import './prop.scss';
+
+.assignments {
+    border-radius: 40px;
+    border: solid 1px #DCDCDC;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 67vh;
+    width: 28vw;
+    margin-left: 40px;
+
+    .assignTitle{
+        font-size: 35px;
+        font-weight: 700;
+        color: $appGBlack;
+        margin-bottom: 30px;
+    }
+
+    .singleAssignment {
+        display: flex;
+        height: 100px;
+        margin-bottom: 20px;
+
+        .date  {
+            display: flex;
+            font-weight: 700;
+            font-size: 25px;
+            color: $appGBlack;
+            align-items: center;
+            text-align: center;
+            width: 4vw;
+            border-right: solid 1px #B9B9B9;
+        }
+
+        .details {
+            display: flex;
+            justify-content: center;
+
+            flex-direction: column;
+            padding-left: 30px;
+
+            .subject {
+                color: $appGBlack;
+                font-weight: 700;
+                font-size: 25px;
+                margin-bottom: 5px;
+            }
+
+            .desc {
+                color: $lightText;
+                margin-bottom: 5px;
+            }
+
+            .status  {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                font-size: 14px;
+                height: 20px;
+                width: 100px;
+                background-color: #F9C43B;
+            }
+        }
+    }
+}

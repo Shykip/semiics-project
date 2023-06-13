@@ -1,6 +1,7 @@
 import "../style/heading.scss"
 import searchIcon from "../images/search-icon.png"
 import smallProfile from "../images/small-profile.png"
+import borderLine from "../images/border-image.png"
 
 function Heading() {
 
@@ -9,6 +10,7 @@ function Heading() {
 
             <div className="heading-left">
                 <div className="txtLogo">Semiics</div>
+                <img src={borderLine} alt="" className="borderLine" />
                 <div className="pageTitle">Dashboard</div>
             </div>
             

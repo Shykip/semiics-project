@@ -2,7 +2,7 @@
 
 .navBar {
     height: 92vh;
-    width: 6vw;
+    width: 5vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,10 +14,18 @@
         justify-content: space-between;
         flex-direction: column;
         margin-top: 50px;
-        height: 18vh;
+        height: 16vh;
+
+        img {
+            width: 40px;
+        }
     }
 
     .botBar {
         margin-bottom: 50px;
+
+        img {
+            width: 40px;
+        }
     }
 }

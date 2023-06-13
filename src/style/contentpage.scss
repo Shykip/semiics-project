@@ -6,21 +6,236 @@
     height: 92vh;
 
     .dashboardPage {
-        width: 94vw;
+        width: 95vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         .dashboardTopContents {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            padding-left: 4vw;
+            padding-right: 4vw;
+
+            .markings {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 65v;
+
+                .borderLine {
+                    width: 1px;
+                    height: 130px;
+                }
+
+                .onHold-box {
+                    width: 270px;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .onHoldTop {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        p{
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: $lightText;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .onHold-number{
+                        font-weight: 600;
+                        color: $appGBlack;
+                        font-size: 40px;
+                    }
+                }
+
+                .completed-box {
+                    width: 350px;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 80px;
+
+                    .completedTop{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        p{
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: $lightText;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .completed-number{
+                        font-weight: 600;
+                        color: $appGBlack;
+                        font-size: 40px;
+                        padding-left: 3px;
+                    }
+                }
+
+                .missed-box {
+                    width: 350px;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 80px;
+
+                    .missedTop{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        p{
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: $lightText;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .missed-number{
+                        font-weight: 600;
+                        color: $appGBlack;
+                        font-size: 40px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+
+            .profile {
+                display: flex;
+                width: 30vw;
+                align-items: center;
+                padding-left: 40px;
+
+                .profile-picture {
+                    img{
+                        width: 140px;
+                    }
+                }
+
+                .profileRight{
+                    margin-left: 35px;
+                    color: $appGBlack;
+
+                    .profile-name{
+                        font-weight: 700;
+                        font-size: 30px;
+                    }
+
+                    .sem {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $lightText;
+                    }
+
+                    .level {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    .expLineBox {
+                        margin-top: 10px;
+                        width: 13.5vw;
+                        height: 12px;
+                        border-radius: 20px;
+                        background-color: #D9D9D9;
+
+                        .expLine {
+                            width: 60%;
+                            height: 100%;
+                            border-radius: 20px;
+                            background-color: $appGBlack;
+                        }
+                    }
+                }
+            }
         }
 
         .dashboardBotContents {
             display:  flex;
-            justify-content: space-between;
             width: 100%;
+
+            .performance {
+                display: flex;
+                height: 67vh;
+                margin-left: 4vw;
+                flex-direction: column;
+                width: 57vw;
+                border-radius: 40px;
+                border: solid 1px #DCDCDC;
+                padding: 50px;
+
+                .performanceTop {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+
+                    .performanceTop-left {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .performanceTitle {
+                            font-size: 35px;
+                            font-weight: 700;
+                            color: $appGBlack;
+                        }
+
+                        .monthSelectBox{
+                            display: flex;
+                            height: 40px;
+                            width: 190px;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-radius: 10px;
+                            border: solid 1px #DCDCDC;
+                            color: $lightText;
+
+                            .calender{
+                                height: 25px;
+                            }
+                        }
+                    }
+
+                    .performanceTop-Right {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .batch {
+                            height: 100px;
+                        }
+
+                        .rankName{
+                            margin-top: 10px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: $appGBlack;
+                        }
+                    }
+                }
+
+                .graph {
+                    .exampleGraph {
+                        width: 51.5vw;
+                    }
+                }
+                
+            }
         }
     }
 }
