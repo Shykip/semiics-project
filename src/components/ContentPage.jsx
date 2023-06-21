@@ -1,10 +1,10 @@
-import "../style/contentPage.scss"
+import "../style/contentpage.scss"
 import NavBar from "./NavBar"
 import Markings from "./Markings"
 import Profile from "./Profile"
 import Performance from "./Performance"
 import Assignments from "./Assignments"
-
+ 
 function ContentPage() {
     
     return (

@@ -1,7 +1,7 @@
 @import './prop.scss';
 
 .navBar {
-    height: 92vh;
+    height: 45.5vw;
     width: 5vw;
     display: flex;
     align-items: center;
@@ -13,19 +13,19 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin-top: 50px;
-        height: 16vh;
+        margin-top: 2.5vw;
+        height: 8vw;
 
         img {
-            width: 40px;
+            width: 2vw;
         }
     }
 
     .botBar {
-        margin-bottom: 50px;
+        margin-bottom: 2.5vw;
 
         img {
-            width: 40px;
+            width: 2vw;
         }
     }
 }
