@@ -1,0 +1,38 @@
+.main-body {
+  background-color: rgb(210, 234, 250);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    display: flex;
+    border: 1px solid rgba(166, 166, 166, 0.279);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px 10px rgba(91, 233, 255, 0.489);
+
+    .form-container {
+      background-color: white;
+      padding: 40px 50px;
+
+      .signup-form {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .usericon {
+        margin-right: -20px;
+        color: red;
+      }
+    }
+
+    .textblock {
+      background-color: rgb(91, 234, 255);
+      padding: 40px 50px;
+    }
+  }
+}
