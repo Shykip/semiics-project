@@ -2,6 +2,7 @@ import onHoldIcon from "../images/onhold-icon.png"
 import completedIcon from "../images/completed-icon.png"
 import missedIcon from "../images/missed-icon.png"
 import borderLine from "../images/border-image.png"
+import '../style/markings.scss'
 
 function Markings() {
     return (

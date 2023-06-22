@@ -1,0 +1,16 @@
+@import './prop.scss';
+
+.contentPage{
+    display: flex;
+    align-items: center;
+
+    .dashboardPage{
+        display: flex;
+        flex-direction: column;
+        padding: 0 3vw;
+
+        .dashboardTopContents{
+            display:  flex;
+        }
+    }
+}

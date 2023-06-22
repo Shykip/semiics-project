@@ -1,4 +1,4 @@
-import "../style/assignments.scss"
+// import "../style/assignments.scss"
 
 function Assignments() {
     return (

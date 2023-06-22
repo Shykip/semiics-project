@@ -8,25 +8,26 @@ function Heading() {
     return (
         <div className="heading">
 
-            <div className="heading-left">
+            <div className="heading_left">
                 <div className="txtLogo">Semiics</div>
                 <img src={borderLine} alt="" className="borderLine" />
                 <div className="pageTitle">Dashboard</div>
             </div>
             
-            <div className="heading-right">
+            <div className="heading_right">
                 <div className="searchProfile">
-                    <div className="search-icon-box">
+                    <div className="search_icon_box">
                         <img className="serachLogo" src={searchIcon} alt="" />
                     </div>
                     <input className="searchInput" type="text" placeholder="Search Profile" />
                 </div>
+                
                 <div className="headingProfile">
-                    <div className="headingProfile-left">
-                        <div className="headingProfile-name">John Kuy</div>
-                        <div className="headingProfile-sem">4th sem</div>
+                    <div className="headingProfile_left">
+                        <div className="headingProfile_name">John Kuy</div>
+                        <div className="headingProfile_sem">4th sem</div>
                     </div>
-                    <div className="headingProfile-picture-box">
+                    <div className="headingProfile_picture_box">
                         <img src={smallProfile} alt="" />
                     </div>
                 </div>

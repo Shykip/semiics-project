@@ -1,106 +1,122 @@
-@import 'prop.scss';
+@import "./prop.scss";
 
-.heading {
+.heading{
     display: flex;
-    width: 100vw;
-    height: 4.5vw;
+    align-items: center;
     justify-content: space-between;
-    background-color: $appGBlack;
-    color: white;
+    background-color: $web_G_Black;
+    padding: 0 3vw;
+    height: 70px;
+    width: 100%;
 
-    .heading-left {
+    .heading_left{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 25vw;
 
-        .txtLogo {
-            font-size: 1.9vw;
+        .txtLogo{
+            color: $web_White_text;
+            font-size: $LargeFonts;
             font-weight: 800;
-            width: 50%;
-            display: flex;
-            align-items: center;
-            margin-left: 3vw;
+            padding-right: 3vw;
         }
 
-        .borderLine {
+        .borderLine{
+            height: 50px;
             width: 1px;
-            height: 2vw;
         }
 
-        .pageTitle {
-            width: 50%;
-            font-size: 1.4vw;
+        .pageTitle{
+            color: $web_White_text;
+            font-size: $MediumFonts;
             font-weight: 600;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding-left: 3vw;
+
         }
     }
-    
-    .heading-right {
+
+    .heading_right{
         display: flex;
-        justify-content: end;
-        width: 50vw;
+        align-items: center;
 
-        .searchProfile {
-
+        .searchProfile{
             display: flex;
             align-items: center;
-            width: 22vw;
+            margin-right: 40px;
 
-            .search-icon-box {
+            .search_icon_box{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: $appDarkGreenGray;
-                height: 2.6vw;
-                width: 20%;
-                border-radius: 3vw 0 0 3vw;
+                height: 45px;
+                width: 70px;
+                background-color: $web_Washed_Green;
+                border-radius: 40px 0 0 40px;
 
-                .serachLogo {
-                    height: 1.4vw;
+                .serachLogo{
+                    width: 25px;
                 }
             }
 
-            .searchInput {
-                width: 80%;
-                height: 2.6vw;
-                background-color: $appDarkGreenGray;
+            .searchInput{
+                display: flex;
+                align-items: center;
+                height: 45px;
+                width: 300px;
+                background-color: $web_Washed_Green;
                 border: none;
-                border-radius: 0 3vw 3vw 0;
-                color: $appLightGray;
-                font-size: 1vw;
+                border-radius: 0 40px 40px 0;
+                font-size: $SmallFonts;
+                color: $heading_font_gray;
             }
         }
 
-        .headingProfile {
+        .headingProfile{
             display: flex;
             align-items: center;
-            justify-content: end;
-            padding-right: 3vw;
-            width: 15vw;
 
-            .headingProfile-left {
+            .headingProfile_left{
                 display: flex;
+                align-items: end;
                 flex-direction: column;
-                align-items: flex-end;
-                font-size: 1.2vw;
-                font-weight: 500;
-                padding-right: 1vw;
+                justify-content: center;
+                margin-right: 20px;
 
-                .headingProfile-sem {
-                    font-size: 1vw;
-                    color: $appLightGray;
+                .headingProfile_name{
+                    color: $web_White_text;
+                    font-size: $SmallFonts;
+                    font-weight: 600;
+                }
+                .headingProfile_sem{
+                    color: $web_White_text;
+                    font-size: $TinyFonts;
+                    color: $heading_font_gray;
+                    font-weight: 600;
                 }
             }
-
-            .headingProfile-picture-box {
-                img {
-                    width: 2.6vw;
+            .headingProfile_picture_box{
+                width: 45px;
+                img{
+                    width: 100%;
                 }
             }
         }
     }
 }
 
+@media only screen and (max-width: 940px) {
+
+    .heading{
+        .heading_right{
+            .searchProfile{
+                display: none;
+            }
+
+            .headingProfile{
+                .headingProfile_left{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

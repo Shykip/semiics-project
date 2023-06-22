@@ -1,4 +1,5 @@
 import bigProfile from "../images/big-profile.png"
+import '../style/profile.scss'
 
 function Profile() {
     return (
