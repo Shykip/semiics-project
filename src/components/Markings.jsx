@@ -7,35 +7,34 @@ import '../style/markings.scss'
 function Markings() {
     return (
         <div className="markings">
-            <div className="onHold-box">
+            <div className="onHold_box">
                 <div className="onHoldTop">
                     <img src={onHoldIcon} alt="" />
                     <p>On Hold</p>
                 </div>
-                <p className="onHold-number">4</p>
+                <p className="onHold_number">4</p>
             </div>
 
             <img src={borderLine} alt="" className="borderLine" />
 
-            <div className="completed-box">
+            <div className="completed_box">
                 <div className="completedTop">
                     <img src={completedIcon} alt="" />
                     <p>Completed</p>
                 </div>
-                <p className="completed-number">25/32</p>
+                <p className="completed_number">25/32</p>
             </div>
 
             <img src={borderLine} alt="" className="borderLine" />
 
-            <div className="missed-box">
+            <div className="missed_box">
                 <div className="missedTop">
                     <img src={missedIcon} alt="" />
                     <p>On Hold</p>
                 </div>
-                <p className="missed-number">3</p>
+                <p className="missed_number">3</p>
             </div>
 
-            <img src={borderLine} alt="" className="borderLine" />
         </div>
     )
 }

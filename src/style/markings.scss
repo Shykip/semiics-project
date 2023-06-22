@@ -2,4 +2,88 @@
 
 .markings{
     display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+    color: $web_G_Black;
+
+    .borderLine{
+        height: max(40px, 9vw);
+    }
+
+    .onHold_box{
+
+        .onHoldTop{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            img{
+                height: max(36px, 2.8vw);
+                margin-right: 20px;
+            }
+
+            p{
+                font-weight: 600;
+                color: $heading_font_gray;
+                font-size: $LargeFonts;
+            }
+        }
+
+        .onHold_number{
+            font-size: $ExtraLargeFonts;
+            font-weight: 600;
+        }
+    }
+
+    .completed_box{
+
+        .completedTop{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            
+            img{
+                height: max(36px, 2.8vw);
+                margin-right: 20px;
+            }
+
+            p{
+                font-weight: 600;
+                color: $heading_font_gray;
+                font-size: $LargeFonts;
+            }
+        }
+
+        .completed_number{
+            font-size: $ExtraLargeFonts;
+            font-weight: 600;
+        }
+    }
+
+    .missed_box{
+        padding-right: 60px;
+
+        .missedTop{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+         
+            img{
+                height: max(36px, 2.8vw);
+                margin-right: 20px;
+            }
+
+            p{
+                font-weight: 600;
+                color: $heading_font_gray;
+                font-size: $LargeFonts;
+            }
+        }
+
+        .missed_number{
+            font-size: $ExtraLargeFonts;
+            font-weight: 600;
+        }
+    }
 }

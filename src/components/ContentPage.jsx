@@ -14,9 +14,9 @@ function ContentPage() {
                 <div className="dashboardTopContents">
                     <Markings /><Profile />
                 </div>
-                {/* <div className="dashboardBotContents">
+                <div className="dashboardBotContents">
                     <Performance /><Assignments />
-                </div> */}
+                </div>
             </div>
         </div>
     )

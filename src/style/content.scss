@@ -2,15 +2,23 @@
 
 .contentPage{
     display: flex;
-    align-items: center;
 
     .dashboardPage{
         display: flex;
         flex-direction: column;
-        padding: 0 3vw;
+        justify-content: space-between;
+        padding: 3vw 4vw;
+        width: calc(100vw - 100px);
 
         .dashboardTopContents{
             display:  flex;
+            justify-content: space-between;
+        }
+
+        .dashboardBotContents{
+            display: flex;
+            justify-content: space-between;
+
         }
     }
 }

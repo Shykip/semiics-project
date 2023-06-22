@@ -1,0 +1,62 @@
+@import './prop.scss';
+
+.assignments{
+    padding: 3vw 3vw;
+    border: solid 1px $border_color_gray;
+    border-radius: 20px;
+    width: 35%;
+
+    .assignTitle{
+        font-size: $ExtraLargeFonts;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .assignContainer{
+
+        .singleAssignment{
+            display: flex;
+            width: 100%;
+            color: $web_G_Black;
+            margin-bottom: 30px;
+
+            .date{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                font-size: $MediumFonts;
+                font-weight: 600;
+                margin-right: max(10px, 1.5vw);
+            }
+
+            .details{
+                display: flex;
+                flex-direction: column;
+                border-left: solid 1px $border_color_gray;
+                padding-left: max(10px, 1.8vw);
+
+                .subject{
+                    font-size: $MediumFonts;
+                    font-weight: 600;
+                }
+
+                .desc{
+                    color: $heading_font_gray;
+                    font-size: $SmallFonts;
+                    margin-bottom: 8px;
+                }
+
+                .status{
+                    background-color: #F9C43B;
+                    color: $web_White_text;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 0 1vw;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

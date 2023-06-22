@@ -1,0 +1,70 @@
+@import './prop.scss';
+
+.performance{
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 3vw;
+    border: solid 1px $border_color_gray;
+    border-radius: 20px;
+    width: 62%;
+
+    .performanceTop{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .performanceTop_left{
+            display: flex;
+            flex-direction: column;
+
+            .performanceTitle{
+                font-size: $ExtraLargeFonts;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            .monthSelectBox{
+                border: solid 1px $heading_font_gray;
+                width: 9vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .5vw;
+                border-radius: 12px;
+
+                .calender{
+                    height: 25px;
+                }
+
+                .monthName{
+                    font-size: $TinyFonts;
+                    color: $heading_font_gray;
+                }
+
+                .downArrow{
+                    height: .5vw;
+                }
+            }
+        }
+
+        .performanceTop_Right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .batch{
+                height: max(40px, 5vw);
+            }
+
+            .rankName{
+                font-size: $SmallFonts;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .exampleGraph{
+        height: 16vw;
+        width: 100%;
+    }
+}

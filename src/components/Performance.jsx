@@ -2,13 +2,14 @@ import calender from "../images/list-icon.png"
 import downArrow from "../images/downarrow.png"
 import batch from "../images/batch.png"
 import exampleGraph from "../images/example-graph.png"
+import '../style/performance.scss'
 
 
 function Performance() {
     return (
         <div className="performance">
             <div className="performanceTop">
-                <div className="performanceTop-left">
+                <div className="performanceTop_left">
                     <p className="performanceTitle">Performance</p>
                     <div className="monthSelectBox">
                         <img src={calender} alt="" className="calender" />
@@ -17,7 +18,7 @@ function Performance() {
                     </div>
                 </div>
 
-                <div className="performanceTop-Right">
+                <div className="performanceTop_Right">
                     <img src={batch} alt="" className="batch" />
                     <p className="rankName">Diamond</p>
                 </div>

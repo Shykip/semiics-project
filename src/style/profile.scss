@@ -2,4 +2,58 @@
 
 .profile{
     display: flex;
+    width: 35%;
+
+    .borderLine{
+        height: max(40px, 9vw);
+        margin-right: 3vw;
+    }
+
+    .profile_picture{
+        display: flex;
+        align-items: center;
+        img{
+            height: 8vw;
+        }
+    }
+
+    .profileRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1.5vw;
+
+        .profile_name{
+            font-size: $LargeFonts;
+            font-weight: 700;
+            color: $web_G_Black;
+        }
+
+        .sem{
+            font-size: $MediumFonts;
+            color: $heading_font_gray;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .level{
+            font-size: $SmallFonts;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .expLineBox{
+            background-color: $heading_font_gray;
+            height: 12px;
+            width: max(30px, 12vw);
+            border-radius: 40px;
+
+            .expLine{
+                background-color: $web_G_Black;
+                height: 100%;
+                width: 80%;
+                border-radius: 40px;
+            }
+        }
+    }
 }
