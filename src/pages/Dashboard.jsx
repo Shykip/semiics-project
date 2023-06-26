@@ -1,11 +1,11 @@
 import "../style/contentPage.scss"
-import NavBar from "./NavBar"
-import Markings from "./Markings"
-import Profile from "./Profile"
-import Performance from "./Performance"
-import Assignments from "./Assignments"
+import NavBar from "../components/NavBar"
+import Markings from "../components/Markings"
+import Profile from "../components/Profile"
+import Performance from "../components/Performance"
+import Assignments from "../components/Assignments"
 
-function ContentPage() {
+function Dashboard() {
     
     return (
         <div className="contentPage">
@@ -22,4 +22,4 @@ function ContentPage() {
     )
 }
 
-export default ContentPage
+export default Dashboard

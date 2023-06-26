@@ -1,13 +1,15 @@
 import { Icon } from "@iconify/react";
 
 import "../../style/signup.scss";
-import InputField from "../common/InputField";
-const SignUp = () => {
+import InputField from "../../components/common/InputField";
+import { Link } from "react-router-dom";
+import StudentsSvg from "../../svgs/students";
+
+const StudentsSignUp = () => {
   function signup(e) {
     e.preventDefault();
 
     console.log("hi");
-    alert("Registered");
   }
 
   return (
@@ -15,37 +17,34 @@ const SignUp = () => {
       <div className="wrapper">
         {/* form block */}
         <div className="form-container">
-          <h3>Sign Up</h3>
+          <h3>Students Sign Up</h3>
           <form onSubmit={signup} className="signup-form">
-            <div>
               <InputField icon={"mdi:user"} label={"Username"} />
-            </div>
-
-            <div>
+          
               <InputField icon={"ic:baseline-email"} label={"Email"} />
-            </div>
 
-            <div>
-              <InputField icon={"uis:padlock"} label={"Password"} />
-              <br />
-            </div>
+              <InputField type="password" icon={"uis:padlock"} label={"Password"} />
 
-            <div>
+              <InputField icon={"healthicons:i-training-class-negative"} label={"Course"} />
+              
+            <div className="btn">
               <button type="submit">Sign Up</button>
             </div>
+
           </form>
           <p>
-            Already have an account?<a href="/login">Login</a>
+            Already have an account? <Link to="/students/login">Login.</Link>
           </p>
         </div>
 
         {/* typography block */}
         <div className="textblock">
-          <h3>lorem ipsum</h3>
+          <h3>Student Sign Up</h3>
+          <StudentsSvg/>
         </div>
       </div>
     </div>
   );
 };
 
-export default SignUp;
+export default StudentsSignUp;

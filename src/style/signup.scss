@@ -24,6 +24,36 @@
         margin-top: 20px;
       }
 
+      .btn{
+        
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        button{
+          border-radius: 10px;
+          border: 1px solid  rgba(32, 148, 232, 0.83)  ;
+          width: 70%;
+          padding: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          color: white;
+          font-weight: bold;
+          background: linear-gradient(15deg, rgba(94, 211, 229, 0.863) 0%, rgba(32, 148, 232, 0.83) 100%);
+          font-size: 14px;
+        }
+
+          button:hover,button:active{
+            box-shadow:  0 4px 10px 4px rgba(0, 0, 0, 0.223);
+        }
+
+        button:active{
+            transform: scale(95%);
+        }
+
+      }
+
+
       .usericon {
         margin-right: -20px;
         color: red;
@@ -31,8 +61,15 @@
     }
 
     .textblock {
-      background-color: rgb(91, 234, 255);
+      background-color: rgb(220, 249, 253);
       padding: 40px 50px;
+    }
+
+    .link{
+      text-decoration: none;
+    }
+    .link:hover{
+      color: rgb(100, 191, 243);
     }
   }
 }

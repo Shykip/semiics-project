@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "../../style/loginpage.scss"
 
-const LoginPage = () => {
+const TeachersLoginPage = () => {
 
 
 
@@ -15,7 +16,7 @@ const LoginPage = () => {
         <div className="main">
 
             <div className="form_container">
-                <h3 className="title">LOGIN</h3>
+                <h3 className="title">TEACHERS LOGIN</h3>
                <form onSubmit={login}>
                 <div>
                     <label htmlFor="Username">Username</label><br/>
@@ -32,11 +33,11 @@ const LoginPage = () => {
 
                </form>
 
-        <p className="signup">Don't have an account? <a href="/signup">Signup here.</a></p>
+        <p className="signup">Don't have an account? <Link to="/teachers/signup">Signup here.</Link></p>
 
             </div>
         </div>
      );
 }
  
-export default LoginPage;
+export default TeachersLoginPage;
