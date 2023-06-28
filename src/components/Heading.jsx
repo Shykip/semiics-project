@@ -3,7 +3,7 @@ import searchIcon from "../images/search-icon.png"
 import smallProfile from "../images/small-profile.png"
 import borderLine from "../images/border-image.png"
 
-function Heading() {
+function Heading(props) {
 
     return (
         <div className="heading">
@@ -24,8 +24,8 @@ function Heading() {
                 
                 <div className="headingProfile">
                     <div className="headingProfile_left">
-                        <div className="headingProfile_name">John Kuy</div>
-                        <div className="headingProfile_sem">4th sem</div>
+                        <div className="headingProfile_name">{props.studentData.full_name}</div>
+                        <div className="headingProfile_sem">{props.studentData.semester} sem</div>
                     </div>
                     <div className="headingProfile_picture_box">
                         <img src={smallProfile} alt="" />

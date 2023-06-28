@@ -9,10 +9,12 @@
     .assignTitle{
         font-size: $ExtraLargeFonts;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .assignContainer{
+        height: 20vw;
+        overflow-y: scroll;
 
         .singleAssignment{
             display: flex;
@@ -26,7 +28,8 @@
                 align-items: center;
                 font-size: $MediumFonts;
                 font-weight: 600;
-                margin-right: max(10px, 1.5vw);
+                width: max(20px, 4vw);
+                padding-right: 2vw;
             }
 
             .details{
@@ -34,6 +37,9 @@
                 flex-direction: column;
                 border-left: solid 1px $border_color_gray;
                 padding-left: max(10px, 1.8vw);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 .subject{
                     font-size: $MediumFonts;
@@ -46,8 +52,30 @@
                     margin-bottom: 8px;
                 }
 
-                .status{
-                    background-color: #F9C43B;
+                .statusOn-Hold{
+                    background-color: $web_G_Black;
+                    color: $web_White_text;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 0 1vw;
+                    border-radius: 20px;
+                }
+
+                .statusCompleted{
+                    background-color: $web_green_btn;
+                    color: $web_White_text;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 0 1vw;
+                    border-radius: 20px;
+                }
+
+                .statusMissed{
+                    background-color: $web_red_btn;
                     color: $web_White_text;
                     height: 25px;
                     display: flex;

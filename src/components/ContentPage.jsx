@@ -4,18 +4,18 @@ import Markings from "./Markings"
 import Profile from "./Profile"
 import Performance from "./Performance"
 import Assignments from "./Assignments"
- 
-function ContentPage() {
+
+function ContentPage(props) {
     
     return (
         <div className="contentPage">
             <NavBar />
             <div className="dashboardPage">
                 <div className="dashboardTopContents">
-                    <Markings /><Profile />
+                    <Markings assignData={props.assignData} std_id={props.std_id} /><Profile studentData={props.studentData} />
                 </div>
                 <div className="dashboardBotContents">
-                    <Performance /><Assignments />
+                    <Performance /><Assignments assignData={props.assignData} std_id={props.std_id} />
                 </div>
             </div>
         </div>
