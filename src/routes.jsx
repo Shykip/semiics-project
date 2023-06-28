@@ -8,16 +8,12 @@ import TeachersLoginPage from "./pages/teachers/TeachersLoginPage";
 import StudentsSignUp from "./pages/students/StudentsSignUp";
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
 import AdminPanel from "./pages/admin/AdminPanel";
+import LandingPage from "./pages/LandingPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
+    element: <LandingPage />,
   },
 
   {
