@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import "../../style/signup.scss";
 import { Link } from "react-router-dom";
-import "../admin/admin.scss";
+import "../../style/admin.scss";
 import AdminSvg from "../../svgs/admin";
 
 const AdminPanel = () => {
@@ -17,11 +17,11 @@ const AdminPanel = () => {
           </div>
 
           <div className="Std">
-            Go to Students Signup <Link to="/students/signup">here.</Link>
+            <Link to="/register/student">Register Student?</Link>
           </div>
 
           <div className="Teacher">
-            Go to Teachers Signup <Link to="/teachers/signup">here.</Link>
+            <Link to="/register/teacher">Register Teacher?</Link>
           </div>
         </div>
       </div>

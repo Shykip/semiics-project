@@ -3,8 +3,6 @@ import "../../style/loginpage.scss"
 
 const AdminLoginPage = () => {
 
-
-
     function login(e){
 
         e.preventDefault();
