@@ -12,8 +12,15 @@
     .profile_picture{
         display: flex;
         align-items: center;
+        border-radius: 20vw;
+        width: 8vw;
+        height: 8vw;
+        overflow: hidden;
+
         img{
+            width: 8vw;
             height: 8vw;
+            object-fit: cover;
         }
     }
 
@@ -51,7 +58,6 @@
             .expLine{
                 background-color: $web_G_Black;
                 height: 100%;
-                width: 80%;
                 border-radius: 40px;
             }
         }

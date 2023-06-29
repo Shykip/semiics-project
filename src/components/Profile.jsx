@@ -3,8 +3,20 @@ import '../style/profile.scss'
 import borderLine from '../images/border-image.png'
 
 function Profile(props) {
-
-    console.log(props.studentData)
+    
+    // calculating level
+    let completedNum = 0
+    let totalAssign = 0
+    props.assignData.map((item) => {
+        totalAssign++
+        if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
+            completedNum++
+        }
+    })
+    let totalxp = completedNum*300
+    let level = Math.floor(totalxp/1000)
+    let currentxp = totalxp-(level*1000)
+    let xpPercent = (currentxp/1000)*100
 
     return (
         <div className="profile">
@@ -12,14 +24,14 @@ function Profile(props) {
             <img src={borderLine} alt="" className="borderLine" />
             
             <div className="profile_picture">
-                <img src={bigProfile} alt="" />
+                <img src={`http://localhost/semiics/files/images/profiles/${props.studentData.profileImg}`} alt="Big_Profile" />
             </div>
             <div className="profileRight">
                 <p className="profile_name">{props.studentData.full_name}</p>
                 <p className="sem">{props.studentData.semester} sem</p>
-                <p className="level">Lvl 246</p>
+                <p className="level">Lvl {level}</p>
                 <div className="expLineBox">
-                    <div className="expLine"></div>
+                    <div className="expLine" style={{ width: `${xpPercent}%` }}></div>
                 </div>
             </div>
         </div>

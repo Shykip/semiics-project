@@ -55,37 +55,6 @@ class Database{
         }
     }
 
-    
-
-    // async fetchStudentData(username, password){
-    //     try{
-    //         const result = (await axios.get(`${this.apiUrl}/student.php`))
-    //         return result.data.phpresult
-            
-    //     } catch(error) {
-    //         console.error('Error fetching data', error)
-    //     }
-    // }
-
-    // async fetchTeacherData(){
-    //     try{
-    //         const result = (await axios.get(`${this.apiUrl}/teacher.php`))
-    //         return result.data.phpresult
-            
-    //     } catch(error) {
-    //         console.error('Error fetching data', error)
-    //     }
-    // }
-
-    // async fetchAdminData(){
-    //     try{
-    //         const result = (await axios.get(`${this.apiUrl}/admin.php`))
-    //         return result.data.phpresult
-            
-    //     } catch(error) {
-    //         console.error('Error fetching data', error)
-    //     }
-    // }
 }
 
 

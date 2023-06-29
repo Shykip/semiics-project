@@ -28,7 +28,7 @@ function Heading(props) {
                         <div className="headingProfile_sem">{props.studentData.semester} sem</div>
                     </div>
                     <div className="headingProfile_picture_box">
-                        <img src={smallProfile} alt="" />
+                        <img src={`http://localhost/semiics/files/images/profiles/${props.studentData.profileImg}`} alt="Small_Profile" />
                     </div>
                 </div>
             </div>

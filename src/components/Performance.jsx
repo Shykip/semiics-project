@@ -5,7 +5,34 @@ import exampleGraph from "../images/example-graph.png"
 import '../style/performance.scss'
 
 
-function Performance() {
+function Performance(props) {
+
+    // calculating rank
+    let completedNum = 0
+    let totalAssign = 0
+
+    props.assignData.map((item) => {
+        totalAssign++
+        if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
+            completedNum++
+        }
+    })
+
+    let rankValue = 0
+    let rank = "none"
+
+    if(completedNum != 0){ rankValue = (completedNum/totalAssign)*100 }
+    
+    if(rankValue == 100){ rank = "Grand Master" }
+    else if (rankValue >= 90){ rank = "Master" }
+    else if(rankValue >= 80){ rank = "Diamond" }
+    else if (rankValue >= 70){ rank = "Platinum" }
+    else if (rankValue >= 60){ rank = "Gold" }
+    else if (rankValue >= 50){ rank = "Silver" }
+    else if (rankValue >= 40){ rank = "Bronze" }
+    else { rank = "Iron" }
+
+
     return (
         <div className="performance">
             <div className="performanceTop">
@@ -20,7 +47,7 @@ function Performance() {
 
                 <div className="performanceTop_Right">
                     <img src={batch} alt="" className="batch" />
-                    <p className="rankName">Diamond</p>
+                    <p className="rankName">{rank}</p>
                 </div>
             </div>
 

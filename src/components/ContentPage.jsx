@@ -12,10 +12,10 @@ function ContentPage(props) {
             <NavBar />
             <div className="dashboardPage">
                 <div className="dashboardTopContents">
-                    <Markings assignData={props.assignData} std_id={props.std_id} /><Profile studentData={props.studentData} />
+                    <Markings assignData={props.assignData} std_id={props.std_id} /><Profile std_id={props.std_id} studentData={props.studentData} assignData={props.assignData} />
                 </div>
                 <div className="dashboardBotContents">
-                    <Performance /><Assignments assignData={props.assignData} std_id={props.std_id} />
+                    <Performance assignData={props.assignData} std_id={props.std_id} /><Assignments assignData={props.assignData} std_id={props.std_id} />
                 </div>
             </div>
         </div>
