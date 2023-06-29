@@ -14,19 +14,22 @@ function StudentDash() {
 
     useEffect(() => {
 
+        console.log(std_id)
+
         if (std_id == null || std_id == -1) {
             navigate('/login')
         }
 
         let obj = new Database
         obj.fetchAssignData(std_id).then(data => {
-            setAssignData(data)
+            if(data !== undefined){
+                setAssignData(data)
+            }
         })
 
         obj.getStudentInfo(std_id).then(data => {
             setStudentData(data)
         })
-
     }, [])
 
 
