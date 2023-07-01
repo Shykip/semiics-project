@@ -5,6 +5,8 @@
     border: solid 1px $border_color_gray;
     border-radius: 20px;
     width: 35%;
+    cursor: pointer;
+    background-color: white;
 
     .assignTitle{
         font-size: $ExtraLargeFonts;
@@ -21,6 +23,10 @@
             width: 100%;
             color: $web_G_Black;
             margin-bottom: 30px;
+
+            .custom_file_upload{
+                display: none;
+            }
 
             .date{
                 display: flex;
@@ -40,6 +46,10 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                .statusLogo{
+                    display: none;
+                }
 
                 .subject{
                     font-size: $MediumFonts;
@@ -63,7 +73,7 @@
                     border-radius: 20px;
                 }
 
-                .statusCompleted{
+                .statusApproved{
                     background-color: $web_green_btn;
                     color: $web_White_text;
                     height: 25px;
@@ -83,6 +93,161 @@
                     width: fit-content;
                     padding: 0 1vw;
                     border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+.assignments:hover{
+    border: solid 1px $web_animation_black;
+    transition: all .5s;
+}
+
+.assignments2{
+    padding: 3vw;
+    margin: 3vw 4vw;
+    border: solid 1px $border_color_gray;
+    border-radius: 20px;
+    width: calc(91vw - 100px);
+    height: calc(100vh - 70px - 6vw);
+    overflow: hidden;
+
+    .assignTitle{
+        font-size: $ExtraLargeFonts;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .assignContainer{
+        height: 62vh;
+        overflow-y: scroll;
+
+        .singleAssignment{
+            display: flex;
+            width: 100%;
+            color: $web_G_Black;
+            margin-bottom: 30px;
+
+            .date{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                font-size: $MediumFonts;
+                font-weight: 600;
+                width: max(20px, 4vw);
+                padding-right: 2vw;
+            }
+
+            .details{
+                display: flex;
+                border-left: solid 1px $border_color_gray;
+                padding-left: max(10px, 1.8vw);
+                align-items: center;
+
+                .statusLogo{
+                    margin-right: max(10px, 1.8vw);
+                    border: solid 1px $border_color_gray;
+                    border-style: dashed;
+                    border-radius: 1.2vw;
+                    width: max(60px, 4vw);
+                    height: max(60px, 4vw);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 12px;
+                    color: $heading_font_gray;
+
+                    input[type="file"] {
+                        display: none;
+                    }
+
+                    img{
+                        width: 35%;
+                        margin-bottom: 10px;
+                        opacity: 1;
+                    }
+                }
+                .custom_file_upload{
+                    cursor: pointer;
+                    margin-right: max(10px, 1.8vw);
+                    border: solid 1px $border_color_gray;
+                    border-style: dashed;
+                    border-radius: 1.2vw;
+                    width: max(60px, 4vw);
+                    height: max(60px, 4vw);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 12px;
+                    color: $heading_font_gray;
+
+                    input[type="file"] {
+                        display: none;
+                    }
+
+                    img{
+                        width: 35%;
+                        margin-bottom: 10px;
+                        opacity: .4;
+                    }
+                }
+                .custom_file_upload:hover{
+                    transition: all .5s;
+                    color: $web_G_Black;
+                    img{
+                        transition: all .5s;
+                        opacity: 1;
+                    }
+                }
+
+                .details_right{
+
+                    .subject{
+                        font-size: $MediumFonts;
+                        font-weight: 600;
+                    }
+    
+                    .desc{
+                        color: $heading_font_gray;
+                        font-size: $SmallFonts;
+                        margin-bottom: 8px;
+                    }
+    
+                    .statusOn-Hold{
+                        background-color: $web_G_Black;
+                        color: $web_White_text;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0 1vw;
+                        border-radius: 20px;
+                    }
+    
+                    .statusApproved{
+                        background-color: $web_green_btn;
+                        color: $web_White_text;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0 1vw;
+                        border-radius: 20px;
+                    }
+    
+                    .statusMissed{
+                        background-color: $web_red_btn;
+                        color: $web_White_text;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0 1vw;
+                        border-radius: 20px;
+                    }
+
                 }
             }
         }

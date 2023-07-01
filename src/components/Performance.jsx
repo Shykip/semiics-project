@@ -13,8 +13,10 @@ function Performance(props) {
 
     props.assignData.map((item) => {
         totalAssign++
-        if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
-            completedNum++
+        if(item.std_comp !== null){
+            if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
+                completedNum++
+            }
         }
     })
 

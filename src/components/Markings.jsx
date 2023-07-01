@@ -19,15 +19,17 @@ function Markings(props) {
         const deadline_date = new Date(item.dead_date)
     
         markings.totalNum++
-            
-        if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
-            markings.completedNum++
-        }
-        else if(deadline_date < current_date){
+        
+        if(deadline_date < current_date){
             markings.missedNum++
         }
         else {
             markings.holdNum++
+        }
+        if(item.std_comp !== null){
+            if(JSON.parse(item.std_comp).includes(parseInt(props.std_id))){
+                markings.completedNum++
+            }
         }
     })
 

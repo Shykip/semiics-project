@@ -6,6 +6,7 @@
     padding: 3vw 3vw;
     border: solid 1px $border_color_gray;
     border-radius: 20px;
+    background-color: white;
     width: 62%;
 
     .performanceTop{
@@ -24,16 +25,18 @@
             }
 
             .monthSelectBox{
-                border: solid 1px $heading_font_gray;
+                border: solid 1px $border_color_gray;
                 width: 9vw;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: .5vw;
                 border-radius: 12px;
+                cursor: pointer;
 
                 .calender{
                     height: 25px;
+                    opacity: .2;
                 }
 
                 .monthName{
@@ -43,6 +46,7 @@
 
                 .downArrow{
                     height: .5vw;
+                    opacity: .5;
                 }
             }
         }

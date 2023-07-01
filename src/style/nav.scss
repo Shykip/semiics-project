@@ -9,6 +9,7 @@
     padding: 5vh 0;
     justify-content: space-between;
     border-right: solid 1px $border_color_gray;
+    z-index: 100;
 
     .topBar{
         display: flex;
@@ -19,9 +20,28 @@
             margin-bottom: 6vh;
             width: max(36px, 2.4vw);
         }
+        .dashboard_icon_light{
+            margin-bottom: 6vh;
+            width: max(36px, 2.4vw);
+            opacity: .2;
+            cursor: pointer;
+        }
+        .dashboard_icon_light:hover{
+            opacity: 1;
+            transition: all .5s;
+        }
 
         .list_icon{
             width: max(32px, 2.4vw);
+        }
+        .list_icon_light{
+            width: max(32px, 2.4vw);
+            opacity: .2;
+            cursor: pointer;
+        }
+        .list_icon_light:hover{
+            opacity: 1;
+            transition: all .5s;
         }
     }
 

@@ -8,6 +8,7 @@
     padding: 0 3vw;
     height: 70px;
     width: 100%;
+    z-index: 100;
 
     .heading_left{
         display: flex;
@@ -74,6 +75,7 @@
         .headingProfile{
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             .headingProfile_left{
                 display: flex;
@@ -106,6 +108,33 @@
                     object-fit: cover;
                 }
             }
+        }
+    }
+
+    .logoutbtn_box{
+        position: absolute;
+        z-index: 20;
+        right: 3vw;
+        top: 70px;
+        background-color: $web_G_Black;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        button{
+            width: 8vw;
+            height: 3vw;
+            border: none;
+            background-color: $web_G_Black;
+            color: $heading_font_gray;
+            font-size: $TinyFonts;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover{
+            color: white;
         }
     }
 }

@@ -4,20 +4,39 @@ import Markings from "./Markings"
 import Profile from "./Profile"
 import Performance from "./Performance"
 import Assignments from "./Assignments"
+import { useState } from "react"
 
 function ContentPage(props) {
+
+    const [isAssignTab, setAssignTab] = useState(false)
+    const [isDashTab, setDashTab] = useState(true)
+
+    const handleListBtnClick = () => {
+        setAssignTab(true)
+        setDashTab(false)
+    }
+    const handleDashBtnClick = () => {
+        setDashTab(true)
+        setAssignTab(false)
+    }
     
     return (
         <div className="contentPage">
-            <NavBar />
-            <div className="dashboardPage">
-                <div className="dashboardTopContents">
-                    <Markings assignData={props.assignData} std_id={props.std_id} /><Profile std_id={props.std_id} studentData={props.studentData} assignData={props.assignData} />
+            <NavBar handleListBtnClick={handleListBtnClick} handleDashBtnClick={handleDashBtnClick} isDashTab={isDashTab} isAssignTab={isAssignTab} />
+            {
+                isAssignTab ? 
+                <Assignments assignData={props.assignData} std_id={props.std_id} isAssignTab={true} />
+                :
+                <div className="dashboardPage">
+                    <div className="dashboardTopContents">
+                        <Markings assignData={props.assignData} std_id={props.std_id} /><Profile std_id={props.std_id} studentData={props.studentData} assignData={props.assignData} />
+                    </div>
+                    <div className="dashboardBotContents">
+                        <Performance assignData={props.assignData} std_id={props.std_id} /><Assignments assignData={props.assignData} std_id={props.std_id} isAssignTab={false} handleListBtnClick={handleListBtnClick} />
+                    </div>
                 </div>
-                <div className="dashboardBotContents">
-                    <Performance assignData={props.assignData} std_id={props.std_id} /><Assignments assignData={props.assignData} std_id={props.std_id} />
-                </div>
-            </div>
+            }
+            
         </div>
     )
 }
