@@ -94,6 +94,17 @@
                     padding: 0 1vw;
                     border-radius: 20px;
                 }
+
+                .statusPending{
+                    background-color: $web_yellow_btn;
+                    color: $web_White_text;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 0 1vw;
+                    border-radius: 20px;
+                }
             }
         }
     }
@@ -126,7 +137,7 @@
             display: flex;
             width: 100%;
             color: $web_G_Black;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
 
             .date{
                 display: flex;
@@ -213,6 +224,8 @@
                         color: $heading_font_gray;
                         font-size: $SmallFonts;
                         margin-bottom: 8px;
+                        text-overflow: ellipsis;
+                        width: 50vw;
                     }
     
                     .statusOn-Hold{
@@ -248,8 +261,101 @@
                         border-radius: 20px;
                     }
 
+                    .statusPending{
+                        background-color: $web_yellow_btn;
+                        color: $web_White_text;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0 1vw;
+                        border-radius: 20px;
+                    }
+
                 }
             }
         }
+    }
+}
+
+
+.darkenOverlay{
+    background-color: black;
+    position: absolute;
+    z-index: 80;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    opacity: .8;
+}
+.assign_submit_box_bg{
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 2vw;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+
+    .assign_submit_box{
+        background-color: white;
+        border-radius: 2vw;
+        display: flex;
+        flex-direction: column;
+        padding: max(20px, 3vw);
+        width: max(250px,40vw);
+        height: max(300px,20vw) ;
+        justify-content: space-between;
+
+        .selected_file{
+            font-size: $LargeFonts;
+            font-weight: 800;
+            overflow: hidden;
+        }
+
+        .file_message{
+            padding: 20px;
+            border: solid 1px $border_color_gray;
+            display: flex;
+            font-size: $TinyFonts;
+            height: 100px;
+            outline: none;
+            color: $web_G_Black;
+        }
+        .subButtons{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .cancel_submit{
+                color: white;
+                border: none;
+                background-color: $web_Washed_Green;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: $SmallFonts;
+                cursor: pointer;
+                width: 40%;
+            }
+            .onSubmit{
+                color: white;
+                border: none;
+                background-color: $web_Washed_Green;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: $SmallFonts;
+                cursor: pointer;
+                width: 40%;
+            }
+            .onSubmit:hover{
+                background-color: $web_G_Black;
+            }
+            .cancel_submit:hover{
+                background-color: $web_G_Black;
+            }
+        }
+        
     }
 }

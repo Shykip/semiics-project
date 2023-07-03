@@ -34,10 +34,6 @@ function Performance(props) {
     else if (rankValue >= 40){ rank = "Bronze" }
     else { rank = "Iron" }
 
-    if(props.studentData.full_name === "The Saviour"){
-        rank = "MILF"
-    }
-
     return (
         <div className="performance">
             <div className="performanceTop">

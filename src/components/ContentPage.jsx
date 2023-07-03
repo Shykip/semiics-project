@@ -25,7 +25,7 @@ function ContentPage(props) {
             <NavBar handleListBtnClick={handleListBtnClick} handleDashBtnClick={handleDashBtnClick} isDashTab={isDashTab} isAssignTab={isAssignTab} />
             {
                 isAssignTab ? 
-                <Assignments assignData={props.assignData} std_id={props.std_id} isAssignTab={true} />
+                <Assignments assignData={props.assignData} std_id={props.std_id} isAssignTab={true} studentData={props.studentData} FetchAssignData={props.FetchAssignData} key={props.assignReloadKey} />
                 :
                 <div className="dashboardPage">
                     <div className="dashboardTopContents">
