@@ -36,7 +36,6 @@ function ContentPage(props) {
                     </div>
                 </div>
             }
-            
         </div>
     )
 }

@@ -20,6 +20,11 @@ function Profile(props) {
     let currentxp = totalxp-(level*1000)
     let xpPercent = (currentxp/1000)*100
 
+    if(props.studentData.full_name === "The Saviour"){
+        level = 999
+        xpPercent = 90
+    }
+
     return (
         <div className="profile">
 
