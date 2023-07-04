@@ -1,0 +1,399 @@
+@import "./prop.scss";
+
+
+
+.teacherHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $web_G_Black;
+    padding: 0 3vw;
+    height: 70px;
+    width: 100%;
+
+    .heading_left{
+        display: flex;
+        align-items: center;
+
+        .txtLogo{
+            color: $web_White_text;
+            font-size: $LargeFonts;
+            font-weight: 800;
+            padding-right: 3vw;
+        }
+
+        .borderLine{
+            height: 50px;
+            width: 1px;
+        }
+
+        .pageTitle{
+            color: $web_White_text;
+            font-size: $MediumFonts;
+            font-weight: 600;
+            padding-left: 3vw;
+
+        }
+    }
+
+    .heading_right{
+        display: flex;
+        align-items: center;
+
+        .searchProfile{
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+
+            .search_icon_box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 45px;
+                width: 70px;
+                background-color: $web_Washed_Green;
+                border-radius: 40px 0 0 40px;
+
+                .serachLogo{
+                    width: 25px;
+                }
+            }
+
+            .searchInput{
+                display: flex;
+                align-items: center;
+                height: 45px;
+                width: 300px;
+                background-color: $web_Washed_Green;
+                border: none;
+                border-radius: 0 40px 40px 0;
+                font-size: $SmallFonts;
+                color: $heading_font_gray;
+                outline: none;
+            }
+        }
+
+        .headingProfile{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .headingProfile_left{
+                display: flex;
+                align-items: end;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 20px;
+
+                .headingProfile_name{
+                    color: $web_White_text;
+                    font-size: $SmallFonts;
+                    font-weight: 600;
+                }
+                .headingProfile_sem{
+                    color: $web_White_text;
+                    font-size: $TinyFonts;
+                    color: $heading_font_gray;
+                    font-weight: 600;
+                }
+            }
+            .headingProfile_picture_box{
+                height: 45px;
+                width: 45px;
+                border-radius: 20vw;
+                overflow: hidden;
+
+                img{
+                    height: 45px;
+                    width: 45px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .logoutbtn_box{
+        position: absolute;
+        z-index: 20;
+        right: 3vw;
+        top: 70px;
+        background-color: $web_G_Black;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        button{
+            width: 8vw;
+            height: 3vw;
+            border: none;
+            background-color: $web_G_Black;
+            color: $heading_font_gray;
+            font-size: $TinyFonts;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover{
+            color: white;
+        }
+    }
+}
+
+.teacherContentPage{
+    display: flex;
+    width: 100vw;
+
+    .navBar{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        width: 100px;
+        padding: 5vh 0;
+        justify-content: space-between;
+        border-right: solid 1px $border_color_gray;
+    
+        .topBar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .dashboard_icon{
+                margin-bottom: 6vh;
+                width: max(36px, 2.4vw);
+            }
+            .dashboard_icon_light{
+                margin-bottom: 6vh;
+                width: max(36px, 2.4vw);
+                opacity: .2;
+                cursor: pointer;
+            }
+            .dashboard_icon_light:hover{
+                opacity: 1;
+                transition: all .5s;
+            }
+    
+            .list_icon{
+                width: max(32px, 2.4vw);
+            }
+            .list_icon_light{
+                width: max(32px, 2.4vw);
+                opacity: .2;
+                cursor: pointer;
+            }
+            .list_icon_light:hover{
+                opacity: 1;
+                transition: all .5s;
+            }
+        }
+    
+        .settings_icon{
+            width: max(36px, 2.4vw);
+    
+        }
+    }
+
+    .assignmentsT{
+        padding: 3vw 3vw;
+        margin: 3vw 3vw;
+        border: solid 1px $border_color_gray;
+        border-radius: 20px;
+        width: 60%;
+        background-color: white;
+    
+        .assignTitle{
+            font-size: $ExtraLargeFonts;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+    
+        .assignContainer{
+            height: 60vh;
+            overflow-y: scroll;
+    
+            .singleAssignment{
+                display: flex;
+                width: 100%;
+                color: $web_G_Black;
+                margin-bottom: 60px;
+                justify-content: space-between;
+                align-items: center;
+
+                .date_details{
+                    display: flex;
+
+                    .date{
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                        font-size: $MediumFonts;
+                        font-weight: 600;
+                        width: max(20px, 4vw);
+                        padding-right: 2vw;
+                    }
+        
+                    .details{
+                        display: flex;
+                        flex-direction: column;
+                        border-left: solid 1px $border_color_gray;
+                        padding-left: max(10px, 1.8vw);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+        
+                        .statusLogo{
+                            display: none;
+                        }
+        
+                        .subject{
+                            font-size: $MediumFonts;
+                            font-weight: 600;
+                        }
+        
+                        .desc{
+                            color: $heading_font_gray;
+                            font-size: $SmallFonts;
+                            margin-bottom: 8px;
+                        }
+        
+                        .statusOn-Hold{
+                            background-color: $web_G_Black;
+                            color: $web_White_text;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+                            padding: 0 1vw;
+                            border-radius: 20px;
+                        }
+        
+                        .statusApproved{
+                            background-color: $web_green_btn;
+                            color: $web_White_text;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+                            padding: 0 1vw;
+                            border-radius: 20px;
+                        }
+        
+                        .statusMissed{
+                            background-color: $web_red_btn;
+                            color: $web_White_text;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+                            padding: 0 1vw;
+                            border-radius: 20px;
+                        }
+        
+                        .statusPending{
+                            background-color: $web_yellow_btn;
+                            color: $web_White_text;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+                            padding: 0 1vw;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                
+
+                .manageAssign{
+                    display: flex;
+
+                    img{
+                        height: max(25px, 3vw);
+                        opacity:.2;
+                        margin-right: 20px;
+                    }
+                    img:hover{
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .addAssign{
+        width: 35%;
+        padding: 3vw 3vw;
+        margin: 3vw 0;
+        margin-right: 3vw;
+        border: solid 1px $border_color_gray;
+        border-radius: 20px;
+
+        h1{
+            font-size: $ExtraLargeFonts;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+
+            .subjectSelect{
+                width: 16vw;
+                height: 2.5vw;
+                outline: none;
+                border-radius: 10px;
+                padding-left: .5vw;
+                border: solid 1px $border_color_gray;
+                font-size: $TinyFonts;
+                margin-bottom: 20px;
+                font-weight: 500;
+            }
+
+            .assignDescForm{
+                outline: none;
+                border: solid 1px $border_color_gray;
+                border-radius: 10px;
+                height: 30vh;
+                font-size: $TinyFonts;
+                padding: 1vw;
+                font-weight: 500;
+                margin-bottom: 40px;
+            }
+
+            button{
+                border: solid 1px $border_color_gray;
+                background-color: $web_G_Black;
+                color: white;
+                font-size: $SmallFonts;
+                width: 10vw;
+                height: 3vw;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: $web_green_btn;
+                color: white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 940px) {
+
+    .teacherHeading{
+        .heading_right{
+            .searchProfile{
+                display: none;
+            }
+
+            .headingProfile{
+                .headingProfile_left{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

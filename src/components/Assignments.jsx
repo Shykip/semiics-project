@@ -101,10 +101,10 @@ function Assignments(props) {
                                     <div className="details_right">
                                         <p className="subject" >{item.subject}</p>
                                         <p className="desc">{item.description}</p>
-                                    <div className={`status${status}`}>{status}</div>
+                                        <div className={`status${status}`}>{status}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         )
 
                     })
