@@ -5,12 +5,18 @@ import StudentsSignUp from "./pages/students/StudentsSignUp";
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
 import AdminPanel from "./pages/admin/AdminPanel";
 import LandingPage from "./pages/LandingPage";
+import UserRegister from "./pages/admin/UserRegister";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AdminPanel />,
   },
+  {
+    path: "/admin/user-register",
+    element: <UserRegister />,
+  },
+  ,
   {
     path: "/admin/login",
     element: <AdminLoginPage />,

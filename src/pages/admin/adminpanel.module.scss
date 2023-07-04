@@ -1,0 +1,108 @@
+.main-body {
+  img {
+    height: 82px;
+    width: 115px;
+  }
+
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .assignments {
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+    width: 300px;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .sidebar-items {
+      list-style: none;
+
+      li {
+        padding: 12px 16px;
+        background-color: #eaeafd;
+        border-bottom: 1px solid rgb(214, 214, 214);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      li:hover {
+        background-color: #5353fe;
+        color: white;
+      }
+    }
+  }
+
+  .contents {
+    flex-grow: 1;
+    padding: 20px 16px 12px;
+    overflow-y: auto;
+
+    .header {
+      width: 100%;
+
+      margin-bottom: 24px;
+    }
+    //   assignment table
+    .assignment-list-table {
+      border-collapse: collapse;
+      width: 100%;
+
+      tbody {
+        height: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #3b3bff;
+        text-align: left;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #ddd;
+      }
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      td.action {
+        text-align: center;
+        button {
+          padding: 2px;
+          border-radius: 6px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+        }
+        button:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+}
