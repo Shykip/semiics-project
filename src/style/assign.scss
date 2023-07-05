@@ -111,7 +111,7 @@
 }
 .assignments:hover{
     border: solid 1px $web_animation_black;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .assignments2{
@@ -205,15 +205,16 @@
                     }
                 }
                 .custom_file_upload:hover{
-                    transition: all .5s;
+                    transition: all .2s;
                     color: $web_G_Black;
                     img{
-                        transition: all .5s;
+                        transition: all .2s;
                         opacity: 1;
                     }
                 }
 
                 .details_right{
+                    width: 80%;
 
                     .subject{
                         font-size: $MediumFonts;

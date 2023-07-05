@@ -140,6 +140,82 @@
     }
 }
 
+.popup-container {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .popup {
+        background-color: #fff;
+        padding: 3vw;
+        border-radius: 2vw;
+        height: 10vw;
+        display: flex;
+        
+        .popApprove{
+            background-color: white;
+            cursor: pointer;
+            border: none;
+            img{
+                width: 100%;
+                height: 100%;
+                opacity: .4;
+            }
+        }
+        .popApprove:hover{
+            transition: all .2s;
+            img{
+                opacity: 1;
+            }
+        }
+        .popDeny{
+            background-color: white;
+            border: none;
+            margin: 0 80px;
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                opacity: .4;
+            }
+        }
+        .popDeny:hover{
+            transition: all .2s;
+            img{
+                opacity: 1;
+            }
+        }
+        .popCancel {
+            background-color: $web_G_Black;
+            cursor: pointer;
+            color: white;
+            border: solid 1px $web_G_Black;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            padding: 1vw 4vw;
+            border-radius: 1vw;
+            font-size: $MediumFonts;
+            font-weight: 600;
+            opacity: .4;
+        }
+        .popCancel:hover{
+            transition: all .2s;
+            opacity: 1;
+        }
+    }
+}
+  
+  
+  
+
 .teacherContentPage{
     display: flex;
     width: 100vw;
@@ -171,7 +247,7 @@
             }
             .dashboard_icon_light:hover{
                 opacity: 1;
-                transition: all .5s;
+                transition: all .2s;
             }
     
             .list_icon{
@@ -184,7 +260,7 @@
             }
             .list_icon_light:hover{
                 opacity: 1;
-                transition: all .5s;
+                transition: all .2s;
             }
         }
     
@@ -199,7 +275,7 @@
         margin: 3vw 3vw;
         border: solid 1px $border_color_gray;
         border-radius: 20px;
-        width: 60%;
+        width: 50%;
         background-color: white;
     
         .assignTitle{
@@ -222,15 +298,22 @@
 
                 .date_details{
                     display: flex;
+                    align-items: center;
 
                     .date{
                         display: flex;
+                        flex-direction: column;
                         text-align: center;
                         align-items: center;
-                        font-size: $MediumFonts;
+                        font-size: $TinyFonts;
                         font-weight: 600;
-                        width: max(20px, 4vw);
                         padding-right: 2vw;
+                        color: $heading_font_gray;
+
+                        span{
+                            font-size: $MediumFonts;
+                            color: $web_G_Black;
+                        }
                     }
         
                     .details{
@@ -238,8 +321,6 @@
                         flex-direction: column;
                         border-left: solid 1px $border_color_gray;
                         padding-left: max(10px, 1.8vw);
-                        white-space: nowrap;
-                        overflow: hidden;
                         text-overflow: ellipsis;
         
                         .statusLogo{
@@ -256,50 +337,60 @@
                             font-size: $SmallFonts;
                             margin-bottom: 8px;
                         }
-        
-                        .statusOn-Hold{
-                            background-color: $web_G_Black;
-                            color: $web_White_text;
-                            height: 25px;
+
+                        .status{
                             display: flex;
-                            align-items: center;
-                            width: fit-content;
-                            padding: 0 1vw;
-                            border-radius: 20px;
+
+                            .statusOn-Hold{
+                                background-color: $web_G_Black;
+                                color: $web_White_text;
+                                height: 25px;
+                                display: flex;
+                                align-items: center;
+                                width: fit-content;
+                                padding: 0 1vw;
+                                border-radius: 20px;
+                                margin-right: 10px;
+                            }
+            
+                            .statusApproved{
+                                background-color: $web_green_btn;
+                                color: $web_White_text;
+                                height: 25px;
+                                display: flex;
+                                align-items: center;
+                                width: fit-content;
+                                padding: 0 1vw;
+                                border-radius: 20px;
+                                margin-right: 10px;
+                            }
+            
+                            .statusMissed{
+                                background-color: $web_red_btn;
+                                color: $web_White_text;
+                                height: 25px;
+                                display: flex;
+                                align-items: center;
+                                width: fit-content;
+                                padding: 0 1vw;
+                                border-radius: 20px;
+                                margin-right: 10px;
+                            }
+            
+                            .statusPending{
+                                background-color: $web_yellow_btn;
+                                color: $web_White_text;
+                                height: 25px;
+                                display: flex;
+                                align-items: center;
+                                width: fit-content;
+                                padding: 0 1vw;
+                                border-radius: 20px;
+                                margin-right: 10px;
+                            }
                         }
         
-                        .statusApproved{
-                            background-color: $web_green_btn;
-                            color: $web_White_text;
-                            height: 25px;
-                            display: flex;
-                            align-items: center;
-                            width: fit-content;
-                            padding: 0 1vw;
-                            border-radius: 20px;
-                        }
-        
-                        .statusMissed{
-                            background-color: $web_red_btn;
-                            color: $web_White_text;
-                            height: 25px;
-                            display: flex;
-                            align-items: center;
-                            width: fit-content;
-                            padding: 0 1vw;
-                            border-radius: 20px;
-                        }
-        
-                        .statusPending{
-                            background-color: $web_yellow_btn;
-                            color: $web_White_text;
-                            height: 25px;
-                            display: flex;
-                            align-items: center;
-                            width: fit-content;
-                            padding: 0 1vw;
-                            border-radius: 20px;
-                        }
+                        
                     }
                 }
                 
@@ -340,7 +431,7 @@
             flex-direction: column;
 
             .subjectSelect{
-                width: 16vw;
+                width: 50%;
                 height: 2.5vw;
                 outline: none;
                 border-radius: 10px;
@@ -349,6 +440,16 @@
                 font-size: $TinyFonts;
                 margin-bottom: 20px;
                 font-weight: 500;
+            }
+
+            .dead_date{
+                height: 2.5vw;
+                width: 50%;
+                border: solid 1px $border_color_gray;
+                outline: none;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                padding-left: .5vw;
             }
 
             .assignDescForm{
@@ -377,6 +478,220 @@
                 color: white;
             }
         }
+    }
+
+    .assignmentSubList{
+        padding: 3vw;
+        margin: 3vw 4vw;
+        border: solid 1px $border_color_gray;
+        border-radius: 20px;
+        width: calc(91vw - 100px);
+        height: calc(100vh - 70px - 6vw);
+        overflow: hidden;
+        
+        .assignSubTitle{
+            font-size: $ExtraLargeFonts;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .submitsContainer{
+            height: 60vh;
+            overflow-y: scroll;
+
+            .singleAssignmentT{
+                display: flex;
+                width: 100%;
+                color: $web_G_Black;
+                margin-bottom: 60px;
+                align-items: center;
+        
+                    .date_details{
+                        display: flex;
+                        align-items: center;
+        
+                        .date{
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            align-items: center;
+                            font-size: $TinyFonts;
+                            font-weight: 600;
+                            padding-right: 2vw;
+                            color: $heading_font_gray;
+        
+                            span{
+                                font-size: $MediumFonts;
+                                color: $web_G_Black;
+                            }
+                        }
+            
+                        .details{
+                            display: flex;
+                            border-left: solid 1px $border_color_gray;
+                            padding-left: max(10px, 1.8vw);
+                            text-overflow: ellipsis;
+                            align-items: center;
+
+                            .custom_file_download{
+                                margin-right: max(10px, 1.8vw);
+                                border: solid 1px $border_color_gray;
+                                border-style: dashed;
+                                border-radius: 1.2vw;
+                                width: max(60px, 4vw);
+                                height: max(60px, 4vw);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                font-size: 10px;
+                                color: $heading_font_gray;
+                                background-color: white;
+                                cursor: pointer;
+            
+                                img{
+                                    width: 35%;
+                                    margin-bottom: 10px;
+                                    opacity: .2;
+                                    
+                                }
+                            }
+                            .custom_file_download:hover{
+                                color: $web_G_Black;
+                                img{
+                                    
+                                    opacity: 1;
+                                }
+                            }
+
+                            .subApproved{
+                                margin-right: max(10px, 1.8vw);
+                                border: solid 1px $border_color_gray;
+                                border-style: dashed;
+                                border-radius: 1.2vw;
+                                width: max(60px, 4vw);
+                                height: max(60px, 4vw);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+            
+                                img{
+                                    width: 60%;
+                                }
+                            }
+
+                            .subDenied{
+                                margin-right: max(10px, 1.8vw);
+                                border: solid 1px $border_color_gray;
+                                border-style: dashed;
+                                border-radius: 1.2vw;
+                                width: max(60px, 4vw);
+                                height: max(60px, 4vw);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+            
+                                img{
+                                    width: 60%;
+                                }
+                            }
+
+                            .details_right{
+                                width: 80%;
+                                
+                                .submitter{
+                                    font-size: $TinyFonts;
+                                    font-weight: 600;
+                                    color: $heading_font_gray;
+                                }
+                
+                                .subject{
+                                    font-size: $MediumFonts;
+                                    font-weight: 700;
+                                    margin-bottom: 10px;
+                                }
+                
+                                .desc{
+                                    color: $heading_font_gray;
+                                    font-size: $SmallFonts;
+                                    font-weight: 600;
+                                    margin-bottom: 8px;
+                                }
+    
+                                .message{
+                                    color: $heading_font_gray;
+                                    font-size: $TinyFonts;
+                                    margin-bottom: 8px;
+    
+                                    span{
+                                        font-size: $TinyFonts;
+                                        font-weight: 600;
+                                    }
+                                }
+            
+                                .status{
+                                    display: flex;
+            
+                                    .statusOn-Hold{
+                                        background-color: $web_G_Black;
+                                        color: $web_White_text;
+                                        height: 25px;
+                                        display: flex;
+                                        align-items: center;
+                                        width: fit-content;
+                                        padding: 0 1vw;
+                                        border-radius: 20px;
+                                        margin-right: 10px;
+                                    }
+                    
+                                    .statusApproved{
+                                        background-color: $web_green_btn;
+                                        color: $web_White_text;
+                                        height: 25px;
+                                        display: flex;
+                                        align-items: center;
+                                        width: fit-content;
+                                        padding: 0 1vw;
+                                        border-radius: 20px;
+                                        margin-right: 10px;
+                                    }
+                    
+                                    .statusMissed{
+                                        background-color: $web_red_btn;
+                                        color: $web_White_text;
+                                        height: 25px;
+                                        display: flex;
+                                        align-items: center;
+                                        width: fit-content;
+                                        padding: 0 1vw;
+                                        border-radius: 20px;
+                                        margin-right: 10px;
+                                    }
+                    
+                                    .statusPending{
+                                        background-color: $web_yellow_btn;
+                                        color: $web_White_text;
+                                        height: 25px;
+                                        display: flex;
+                                        align-items: center;
+                                        width: fit-content;
+                                        padding: 0 1vw;
+                                        border-radius: 20px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            } 
+                            
+            
+                            
+                        }
+                    }
+                
+            
+            }
+        }
+
+        
     }
 }
 

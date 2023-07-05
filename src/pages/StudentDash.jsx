@@ -11,12 +11,16 @@ function StudentDash() {
     let std_id = sessionStorage.getItem('std_id')
     const [assignData, setAssignData] = useState([])
     const [studentData, setStudentData] = useState([])
+    const [load, setLoad] = useState(false)
 
     const FetchAssignData = () => {
 
         obj.fetchAssignData(std_id).then(data => {
             if(data !== undefined){
                 setAssignData(data)
+                setLoad(true)
+            } else {
+                setLoad(true)
             }
         })
     }
@@ -36,10 +40,14 @@ function StudentDash() {
 
     return (
         <>
+        {load ?<>
             <Heading studentData={studentData} />
             <ContentPage assignData={assignData} studentData={studentData} std_id={std_id} FetchAssignData={FetchAssignData} />
+            </>
+        : ''}
         </>
     )
+            
 }
 
 export default StudentDash

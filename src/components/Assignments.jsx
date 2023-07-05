@@ -12,17 +12,19 @@ function Assignments(props) {
     const [isSubmitBox, setSubmitBox] = useState(false)
     const [file, setFile] = useState(null)
     const [assign_id, setAssign_id] = useState(-1)
+    const [teacher_id, setTeacher_id] = useState(-1)
     let obj = new Database
 
     const onChangeSubmit = (e) => {
         setSubmitBox(true)
         setFile(e.target.files[0])
         setAssign_id(e.target.getAttribute('name'))
+        setTeacher_id(e.target.getAttribute('id'))
     }
 
     const onFileSubmit = () => {
         let file_message = document.getElementById('file_message').value
-        obj.submitAssignment(file, assign_id, file_message, props.std_id, props.studentData.full_name).then(() => {
+        obj.submitAssignment(file, assign_id, file_message, props.std_id, props.studentData.full_name, teacher_id).then(() => {
             props.FetchAssignData()
         })
         setSubmitBox(false)
@@ -41,7 +43,8 @@ function Assignments(props) {
             <p className="assignTitle">Assignments</p>
             <div className="assignContainer">
 
-                {
+                {props.assignData ?
+
                     props.assignData.map((item) => { 
 
                         const current_date = new Date()
@@ -94,7 +97,7 @@ function Assignments(props) {
                                 <div className="details">
                                     
                                     {isMissed ? <><label className="statusLogo"><img src={missedIcon} />Missed</label></> : ''}
-                                    {isHold ? <><label className="statusLogo custom_file_upload"><input type="file" name={item.assign_id} onChange={onChangeSubmit} /><img src={uploadIcon} />Submit</label></> : ''}
+                                    {isHold ? <><label className="statusLogo custom_file_upload"><input type="file" name={item.assign_id} id={item.teacher_id} onChange={onChangeSubmit} /><img src={uploadIcon} />Submit</label></> : ''}
                                     {isPending ? <><label className="statusLogo"><img src={pendingIcon} />Pending</label></> : ''}
                                     {isCompleted ? <><label className="statusLogo"><img src={approvedIcon} />Approved</label></> : ''}
                                     
@@ -108,7 +111,7 @@ function Assignments(props) {
                         )
 
                     })
-                }
+                : ''}
                 
             </div>
         </div>
