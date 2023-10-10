@@ -5,6 +5,7 @@ import InputField from "../../components/common/InputField";
 import TeacherSvg from "../../svgs/teacher";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 const TeachersSignUp = () => {
   const [teacherFormData, setteacherFormData] = useState({});
@@ -24,8 +25,8 @@ const TeachersSignUp = () => {
 
     setteacherFormErrors({});
 
-    if (!teacherFormData.userName) {
-      errors.userName = "Username is required";
+    if (!teacherFormData.username) {
+      errors.username = "Username is required";
       isFormValidated = false;
     }
 
@@ -34,19 +35,49 @@ const TeachersSignUp = () => {
       isFormValidated = false;
     }
 
-    if (!teacherFormData.email) {
-      errors.email = "Email is required";
+    if (!teacherFormData.subject) {
+      errors.subject = "Subject is required";
       isFormValidated = false;
     }
 
-    if (!teacherSelectedPhoto) {
-      errors.teacherSelectedPhoto = "Photo is required";
+    if (!teacherFormData.fullname) {
+      errors.fullname = "Fullname is required";
       isFormValidated = false;
     }
+
+    // if (!teacherSelectedPhoto) {
+    //   errors.teacherSelectedPhoto = "Photo is required";
+    //   isFormValidated = false;
+    // }
 
     setteacherFormErrors(errors);
 
     return isFormValidated;
+  };
+
+  const handleSubmit = () => {
+    const url = "http://localhost/semiics/teacher-signup.php";
+    let fData = new FormData();
+    fData.append("username", teacherFormData.username);
+    fData.append("password", teacherFormData.password);
+    fData.append("subject", teacherFormData.subject);
+    fData.append("fullname", teacherFormData.fullname);
+    // fData.append("photo", teacherSelectedPhoto);
+
+    // const multer = require("multer");
+    // const upload = multer({
+    //   dest: "http://localhost/semiics/teacher-signup.php",
+    // }); // Set the destination for the uploaded files
+
+    // app.post("/api/save-data", upload.single("photo"), (req, res) => {
+    //   // req.file contains information about the uploaded file
+    //   // req.body contains the other form data
+    // });
+
+    axios
+      .post(url, fData)
+      .then((response) => alert("success signup"))
+      .catch((error) => alert(error));
   };
 
   // this function will be called if form is submitted
@@ -57,6 +88,7 @@ const TeachersSignUp = () => {
       console.log("teacherFormData", teacherFormData);
       console.log("file", teacherSelectedPhoto);
       // call api here
+      handleSubmit();
     }
   }
 
@@ -70,10 +102,10 @@ const TeachersSignUp = () => {
             <InputField
               icon={"mdi:user"}
               label={"Username"}
-              name="userName"
+              name="username"
               onChange={inputHandler}
-              value={teacherFormData.userName}
-              errorText={teacherFormErrors.userName}
+              value={teacherFormData.username}
+              errorText={teacherFormErrors.username}
             />
 
             <InputField
@@ -82,15 +114,28 @@ const TeachersSignUp = () => {
               name="password"
               onChange={inputHandler}
               label={"Password"}
+              value={teacherFormData.password}
               errorText={teacherFormErrors.password}
             />
 
             <InputField
-              icon={"ic:baseline-email"}
-              label={"Email"}
-              name="email"
+              type="long"
+              icon={"ion:book-sharp"}
+              label={"Subject"}
+              name="subject"
+              value={teacherFormData.subject}
               onChange={inputHandler}
-              errorText={teacherFormErrors.email}
+              errorText={teacherFormErrors.subject}
+            />
+
+            <InputField
+              type="text"
+              icon={"icon-park-solid:edit-name"}
+              label={"Fullname"}
+              name="fullname"
+              value={teacherFormData.fullname}
+              onChange={inputHandler}
+              errorText={teacherFormErrors.fullname}
             />
 
             <InputField
